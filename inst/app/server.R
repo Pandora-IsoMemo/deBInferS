@@ -61,10 +61,14 @@ shinyServer(function(input, output, session) {
   )
 
   observe({
-    output$example_plot <- renderPlot({
+    output$example_plot_1 <- renderPlot({
       plot(mcmc_samples)
-      # pairs(mcmc_samples)
-      # post_prior_densplot(mcmc_samples)
+    })
+    output$example_plot_2 <- renderPlot({
+      pairs(mcmc_samples)
+    })
+    output$example_plot_3 <- renderPlot({
+      post_prior_densplot(mcmc_samples)
     })
   }) %>% bindEvent(input$example)
 })

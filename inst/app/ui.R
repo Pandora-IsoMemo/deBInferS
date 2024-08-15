@@ -3,7 +3,7 @@ library(deBInfer)
 
 tagList(
   navbarPage(
-    title = paste("AppAroundPackage", packageVersion("AppAroundPackage")),
+    title = paste("deBInferS", packageVersion("deBInferS")),
     theme = shinythemes::shinytheme("flatly"),
     position = "fixed-top",
     collapsible = TRUE,
@@ -16,7 +16,9 @@ tagList(
           actionButton("example", "Create Example")
         ),
         mainPanel(
-          plotOutput("example_plot")
+          plotOutput("example_plot_1"),
+          plotOutput("example_plot_2"),
+          plotOutput("example_plot_3")
         ),
       )
     )

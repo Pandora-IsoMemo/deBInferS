@@ -4,4 +4,4 @@ ADD . .
 
 RUN installPackage
 
-CMD ["Rscript", "-e", "library(AppAroundPackage);startApplication(3838)"]
+CMD ["Rscript", "-e", "library(deBInferS);startApplication(3838)"]
