@@ -1,1 +1,1 @@
-An app around oxcAAR package.
+An app around deBInfer package.
