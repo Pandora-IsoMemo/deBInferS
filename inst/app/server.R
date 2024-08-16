@@ -58,7 +58,8 @@ shinyServer(function(input, output, session) {
     Tmax = max(logistic$time), data.times = logistic
     $time,
     cnt = 500, plot = FALSE, solver = "ode"
-  )
+  ) %>%
+    withProgress(message = "Running MCMC", detail = "Please wait...", value = 0.7)
 
   observe({
     output$example_plot_1 <- renderPlot({
