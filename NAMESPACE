@@ -2,5 +2,6 @@
 
 export("%>%")
 export(startApplication)
+import(deBInfer)
 import(shiny)
 importFrom(magrittr,"%>%")

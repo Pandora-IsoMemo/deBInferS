@@ -13,6 +13,7 @@
 #' @return The result of calling `rhs(lhs)`.
 
 #' @rawNamespace import(shiny)
+#' @rawNamespace import(deBInfer)
 NULL
 
 utils::globalVariables(

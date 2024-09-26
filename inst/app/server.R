@@ -58,13 +58,18 @@ shinyServer(function(input, output, session) {
     Tmax = max(logistic$time), data.times = logistic
     $time,
     cnt = 500, plot = FALSE, solver = "ode"
-  )
+  ) %>%
+    withProgress(message = "Running MCMC", detail = "Please wait...", value = 0.7)
 
   observe({
-    output$example_plot <- renderPlot({
+    output$example_plot_1 <- renderPlot({
       plot(mcmc_samples)
-      # pairs(mcmc_samples)
-      # post_prior_densplot(mcmc_samples)
+    })
+    output$example_plot_2 <- renderPlot({
+      pairs(mcmc_samples)
+    })
+    output$example_plot_3 <- renderPlot({
+      post_prior_densplot(mcmc_samples)
     })
   }) %>% bindEvent(input$example)
 })
